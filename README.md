@@ -57,4 +57,119 @@ enhancement I mentioned (topic algorithm using LatentDirichletAllocation, cluste
 2. TF-IDF Matrix and Inverted Index: The project calculates the TF-IDF matrix for the documents in the datasets. This matrix represents the importance of each        term in each document, enabling efficient retrieval based on term relevance. Additionally, the creation of an inverted index allows for quick document     rtrieval based on terms, significantly speeding up the search process.
  
  Overall, the search engine project aims to provide a robust, efficient, and user-friendly solution for information retrieval from the COVID-19 and BIRE datasets. It combines various techniques, algorithms, and evaluation measures to deliver relevant search results and enhance the overall search experience.
- 
+
+
+
+
+
+
+
+ # Flask Search Engine for Information Retrieval System
+
+This application is a search engine for an information retrieval system built using Flask. It supports two datasets and provides functionalities for refining queries, retrieving documents based on queries, and implementing clustering and topic modeling algorithms for enhanced search results.
+
+## Features
+
+- **Refine Query**: Provides query suggestions to help users refine their search.
+- **Query Search**: Retrieves documents based on the user's query.
+- **Cluster-Based Query Search**: Enhances search results using clustering algorithms.
+- **Topic-Based Query Search**: Enhances search results using topic modeling algorithms.
+
+## Setup and Installation
+
+### Prerequisites
+
+- Python 3.x
+- Flask
+- Pandas
+- Scikit-learn
+- Scipy
+
+### Installation
+
+1. **Clone the Repository**:
+
+    ```sh
+    git clone https://github.com/yourusername/your-repo-name.git
+    cd your-repo-name
+    ```
+
+2. **Install Dependencies**:
+
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+3. **Download Datasets and Place in Appropriate Paths**:
+
+    Make sure you have the required datasets and place them in the specified paths in the code.
+
+## Usage
+
+### Running the Application
+
+1. **Set the Dataset**:
+
+    Before running the queries, you need to set the dataset by sending a POST request to `/set_dataset` with the dataset value (`1` or `2`).
+
+    ```sh
+    curl -X POST -F 'dataset=1' http://localhost:5000/set_dataset
+    ```
+
+2. **Refine Query**:
+
+    Send a POST request to `/refine_query` with the user query to get suggested queries.
+
+    ```sh
+    curl -X POST -H "Content-Type: application/json" -d '{"user_query": "your query"}' http://localhost:5000/refine_query
+    ```
+
+3. **Query Search**:
+
+    Send a POST request to `/get_query` with the keyword to retrieve documents.
+
+    ```sh
+    curl -X POST -F 'kewword=your keyword' http://localhost:5000/get_query
+    ```
+
+4. **Cluster-Based Query Search**:
+
+    Send a POST request to `/get_query_with_cluster` with the keyword to retrieve documents using clustering algorithms.
+
+    ```sh
+    curl -X POST -F 'kewword=your keyword' http://localhost:5000/get_query_with_cluster
+    ```
+
+5. **Topic-Based Query Search**:
+
+    Send a POST request to `/get_query_with_topic` with the keyword to retrieve documents using topic modeling algorithms.
+
+    ```sh
+    curl -X POST -F 'kewword=your keyword' http://localhost:5000/get_query_with_topic
+    ```
+
+### Example
+
+Here is an example of how to use the application with `curl`:
+
+1. **Set the Dataset**:
+
+    ```sh
+    curl -X POST -F 'dataset=1' http://localhost:5000/set_dataset
+    ```
+
+2. **Refine Query**:
+
+    ```sh
+    curl -X POST -H "Content-Type: application/json" -d '{"user_query": "machine learning"}' http://localhost:5000/refine_query
+    ```
+
+3. **Query Search**:
+
+    ```sh
+    curl -X POST -F 'kewword=machine learning' http://localhost:5000/get_query
+    ```
+
+## File Structure
+
+
