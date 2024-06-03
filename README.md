@@ -173,3 +173,35 @@ Here is an example of how to use the application with `curl`:
 ## File Structure
 
 
+
+.
+├── app.py # Main application file
+├── implment_cluster.py # Clustering algorithm implementation
+├── query_processing.py # Query processing logic
+├── implment_topic.py # Topic modeling algorithm implementation
+├── eval.py # Evaluation script for dataset 1
+├── eval2.py # Evaluation script for dataset 2
+├── get_queries.py # Script to retrieve queries
+├── suggistions.py # Script to refine queries
+├── requirements.txt # Python dependencies
+└── README.md # This README file
+
+
+
+
+
+
+## Contributing
+
+If you would like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcome.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+If you have any questions, feel free to reach out.
+
+
+
