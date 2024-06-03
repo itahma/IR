@@ -27,28 +27,12 @@ enhancement I mentioned (topic algorithm using LatentDirichletAllocation, cluste
  Rank the documents based on their cosine similarity values. Higher cosine similarity values indicate higher similarity to the query.
  suggistions:
  
- 
- ![photo_2023-06-14_00-07-13](https://github.com/MahmoudAbuSalou/ir/assets/87876527/1b6f57e4-3737-405f-9e32-2533179da812)
- 
- 
- using clustring Reducing the search circle within the documants:
- 
- 
- ![Screenshot (153)](https://github.com/MahmoudAbuSalou/ir/assets/87876527/3cbd1eef-4187-4278-826f-d226f38e81f6)
+
  
  
  
 **Evaluation Metrics:**
  the evaluation metrics you calculated (Precision@10, Precision, Recall, MAP, MRR).
- 
- 
- ![Screenshot (152)](https://github.com/MahmoudAbuSalou/ir/assets/87876527/d398786e-07b6-4b76-8d3d-eef09a541481)
- 
- 
- **mpoile app to active and interaction on data sets**
- 
- 
- ![photo_2023-06-14_00-06-49](https://github.com/MahmoudAbuSalou/ir/assets/87876527/d9dfb0d1-af1d-40ae-a247-ea8445a902a4)
  
  
 
@@ -175,16 +159,16 @@ Here is an example of how to use the application with `curl`:
 
 
 .
-├── app.py # Main application file
-├── implment_cluster.py # Clustering algorithm implementation
-├── query_processing.py # Query processing logic
-├── implment_topic.py # Topic modeling algorithm implementation
-├── eval.py # Evaluation script for dataset 1
-├── eval2.py # Evaluation script for dataset 2
-├── get_queries.py # Script to retrieve queries
-├── suggistions.py # Script to refine queries
-├── requirements.txt # Python dependencies
-└── README.md # This README file
+├── app.py # Main application file.
+├── implment_cluster.py # Clustering algorithm implementation.
+├── query_processing.py # Query processing logic.
+├── implment_topic.py # Topic modeling algorithm implementation.
+├── eval.py # Evaluation script for dataset 1.
+├── eval2.py # Evaluation script for dataset 2.
+├── get_queries.py # Script to retrieve queries.
+├── suggistions.py # Script to refine queries.
+├── requirements.txt # Python dependencies.
+└── README.md # This README file.
 
 
 
